@@ -1,0 +1,12 @@
+.beer-card {
+
+    width: 20rem;
+    height : 30rem;
+    border: 2px solid black;
+
+
+    &__img {
+
+        max-height: 50%;
+    }
+}
