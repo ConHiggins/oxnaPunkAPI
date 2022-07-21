@@ -23,15 +23,21 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
     formatDate(brewdate);
     
     return (
-
+    <>
+    <div className="beer-card-wrapper">
+    <div className="beer-card-background"></div>
     <div className="beer-card" key={id} >
         {!showMore && 
         <>
+        <div className="beer-card__date-label">
+            <p className="beer-card__brew-date">First brewed: <br />{dateStr}</p>
+        </div>
             <img className="beer-card__img" src={img} />
             <p className="beer-card__name">{name}</p>
             <p className="beer-card__tagline">{tagline}</p>
-            <p className="beer-card__brew-date">First brewed: {dateStr}</p>
-            <Button className="beer-card__toggle-info" value="Read more" onClick={toggleShowMore} />
+            <div className="beer-card__button">
+                <Button className="beer-card__toggle-info" value="Read more" onClick={toggleShowMore} />
+            </div>
         </> }
          {showMore &&
          <>    
@@ -39,6 +45,8 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
             <p className="beer-card__desc">{desc}</p> 
         </>}
     </div>
+    </div>
+    </>
 )
 
 }

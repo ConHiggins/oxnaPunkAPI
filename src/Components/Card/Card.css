@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");
+.beer-card {
+  position: relative;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 1rem;
+  margin: 2rem;
+  padding: 1rem;
+  background: #284b63;
+  color: #d9d9d9;
+  font-size: 1.5rem;
+  overflow: auto;
+}
+.beer-card::-webkit-scrollbar {
+  background: #353535;
+  width: 2rem;
+}
+.beer-card::-webkit-scrollbar-thumb {
+  background-color: #3c6e71;
+  height: 10%;
+}
+.beer-card__img {
+  margin-top: 2rem;
+  max-height: 50%;
+  position: relative;
+  left: 33%;
+}
+.beer-card__name {
+  font-family: "Rubik Mono One";
+  font-size: 2rem;
+  text-align: center;
+}
+.beer-card__tagline {
+  font-family: "Josefin Slab";
+  font-style: italic;
+}
+.beer-card__brew-date {
+  position: absolute;
+  width: max;
+  top: 4rem;
+  left: 0;
+  text-indent: none;
+  background-color: #353535;
+  -webkit-transform: rotate(-45deg);
+  z-index: 100;
+  overflow: hidden;
+  white-space: nowrap;
+}/*# sourceMappingURL=Card.css.map */
