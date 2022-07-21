@@ -3,10 +3,18 @@
     width: 20rem;
     height : 30rem;
     border: 2px solid black;
+    padding: 1rem;
 
 
     &__img {
 
         max-height: 50%;
+        position: relative;
+        left: 33%;
+    }
+
+    &__tagline {
+
+        font-style: italic;
     }
 }
