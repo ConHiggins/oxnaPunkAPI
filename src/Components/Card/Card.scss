@@ -11,8 +11,8 @@
     content: '';
     position: absolute;
     top: 1rem; left: 90%;
-    border-top: 80px solid $black-col   ;
-    border-left: 80px solid $grey-col;
+    border-top: 80px solid $grey-col;
+    border-left: 80px solid $black-col;
     width: 0;
     z-index: 10; }
 
@@ -20,8 +20,9 @@
     content: '';
     position: absolute;
     top: 1rem; left: 5%;
-    border-top: 80px solid $black-col   ;
-    border-right: 80px solid $grey-col;
+    border-top: 80px solid $grey-col;
+    border-right: 80px solid $black-col;
+    //border-image: linear-gradient(to bottom right, $grey-col 50%, $black-col 55%, $black-col 60%);
     width: 0;
     z-index: 1;
 }
@@ -31,7 +32,8 @@
         content: "";
         position: absolute;        
         margin: 1rem;
-        background: $grey-col;
+        background: linear-gradient(to right, $grey-col , $black-col 20%, $black-col 80%, $grey-col 100% );
+        background: $black-col;
         width: 22rem;
         height : 40rem;
         top: 0;
@@ -39,7 +41,9 @@
         border-radius: 1rem;
         border-top-left-radius: 20%;
         border-top-right-radius: 20%;
-        border: 0.1rem solid $white-col;
+        border: 0.1rem solid $pri-col;
+        border-top: 0.3rem solid $pri-col;
+        border-bottom: 0.5rem solid $pri-col;
         
     }
 .beer-card {
@@ -52,11 +56,12 @@
     margin: 1.1rem;
     margin-top:6rem;
     padding: 1rem;
-    //background: linear-gradient(to right, $black-col, $alt-bg 20%, $alt-bg 80%, $black-col 100% );
+    background: linear-gradient(to right, $black-col, $alt-bg 20%, $alt-bg 80%, $black-col 100% );
     color: $font-col;
     font-size: 1.5rem;
     overflow: auto;
     transition: border-radius 0.5s ease;
+    text-align: center;
 
     &:hover {
         border-radius: 0;
@@ -97,6 +102,8 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 4rem;
+        background: linear-gradient(to top, $font-col, rgba(255,0,0,0) 20%);
+        border-radius: 0.5rem;
         max-height: 0%;
         position: relative;
         box-shadow: 0rem $black-col;
@@ -112,7 +119,7 @@
 
     &__name {
         font-family: "Rubik Mono One";
-        margin-top: 4rem;
+        margin-top: 6rem;
         font-size: 2rem;
         text-align: center;
         color: $white-col;
@@ -121,7 +128,7 @@
     }
 
     &:hover &__name {
-        margin-top: 0;
+        margin-top: 2rem;
      }
 
     &__tagline {
@@ -144,7 +151,7 @@
         text-indent: none;
         background-color: $font-col;
         color: $black-col;
-        -webkit-transform: rotate(-30deg );
+        -webkit-transform: rotate(-30deg ) skewX(10deg);
         z-index: 100;
         overflow: hidden;
         white-space: nowrap;

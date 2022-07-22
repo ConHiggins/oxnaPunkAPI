@@ -2,10 +2,20 @@
 
 .button-primary {
 
-    width: 0.1rem;
+    border: none;
+    background: $pri-col;
+    
 }
 
 .button-secondary {
 
-    width: 10rem;
+    border: none;
+    border-radius: 0.5rem;
+    border-top: 2px solid $font-col;
+    border-bottom: 2px solid $font-col;
+    background: none;
+    color: $font-col;
+    height: 2rem;
+    font-size: 1.5rem;
+    font-family: "Gantari";
 }
