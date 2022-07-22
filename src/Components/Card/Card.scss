@@ -52,15 +52,11 @@
     margin: 1.1rem;
     margin-top:6rem;
     padding: 1rem;
-    background: linear-gradient(to right, $black-col, $alt-bg 20%, $alt-bg 80%, $black-col 100% );
+    //background: linear-gradient(to right, $black-col, $alt-bg 20%, $alt-bg 80%, $black-col 100% );
     color: $font-col;
     font-size: 1.5rem;
     overflow: auto;
     transition: border-radius 0.5s ease;
-
-    
-
-    
 
     &:hover {
         border-radius: 0;
@@ -97,10 +93,12 @@
 
     &__img {
 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 4rem;
         max-height: 0%;
         position: relative;
-        left: 33%;
         box-shadow: 0rem $black-col;
         transform: scale(0);
         transition: transform 0.5s ease, max-height 0.5s ease;
@@ -114,11 +112,17 @@
 
     &__name {
         font-family: "Rubik Mono One";
+        margin-top: 4rem;
         font-size: 2rem;
         text-align: center;
         color: $white-col;
         z-index: 100;
+        transition: margin-top 0.5s ease;
     }
+
+    &:hover &__name {
+        margin-top: 0;
+     }
 
     &__tagline {
 
@@ -154,6 +158,8 @@
 
     &__button {
 
+        display: flex;
+        justify-content: center;
         border: none;
         background: none;
         opacity: 0;

@@ -8,8 +8,8 @@ import beers from './data/beers';
 function App() {
   return (
     <>
-    <NavBar />
-    <Main arr={beers} />
+    <NavBar className="nav-bar"/>
+    <Main className="main" arr={beers} />
     </>
   );
 }

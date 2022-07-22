@@ -1,8 +1,9 @@
 import "./Button.scss";
 
-const Button = ({value, onClick}) => {
+const Button = ({value, onClick, isSecondary}) => {
 
-    return <button value={value} onClick={onClick}>{value}</button>
+    let buttonType = (isSecondary) ? "button-secondary":"button-primary";
+    return <button className={buttonType} value={value} onClick={onClick}>{value}</button>
 }
 
 export default Button;
