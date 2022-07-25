@@ -33,26 +33,6 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
     <>
     <div className="beer-card-wrapper">
     <div className="beer-card-background"></div>
-    <div className="beer-card" key={id} >
-                {/* {!showMore && 
-                <>
-                <div className="beer-card__date-label">
-                    <p className="beer-card__brew-date">First brewed: <br />{dateStr}</p>
-                </div>
-                    <img className="beer-card__img" src={img} />
-                    <p className="beer-card__name">{name}</p>
-                    <p className="beer-card__tagline">{tagline}</p>
-                    <div className="beer-card__button">
-                        <Button isSecondary={true} value=">>" onClick={toggleShowMore} />
-                    </div>
-                </> }
-                {showMore &&
-                <>    
-                    <Button isSecondary={true} value="X" onClick={toggleShowMore} />
-                    <p className="beer-card__desc">{desc}</p> 
-                </>}
-                */}
-             </div> 
     { <Palette src={ img } crossOrigin="anonymous" format="hex">
         {({ data, loading }) => {
             if(data == undefined) { return <p></p>}
