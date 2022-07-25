@@ -6,7 +6,7 @@ const NavBar = ({arr, searchTerm, handleInput}) => {
 
     return (
         <div className="nav-bar">
-            <input type="text" value={searchTerm} onInput={handleInput} className="nav-bar__search-bar"></input>
+            <input className="nav-bar__searchbox" type="text" value={searchTerm} onInput={handleInput}></input>
         </div>
     )
 }

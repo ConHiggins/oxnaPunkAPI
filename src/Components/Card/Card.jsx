@@ -37,9 +37,14 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
         {({ data, loading }) => {
             if(data == undefined) { return <p></p>}
           return (
+            <div key={id} 
+                 className="beer-card" 
+                 style={{ background: `linear-gradient(to right, 
+                                        ${greyCol}, 
+                                        ${data[0]} 20%, 
+                                        ${data[0]} 80%, 
+                                        ${greyCol} 100% )`}} >
 
-            
-            <div style={{ background: `linear-gradient(to right, ${greyCol}, ${data[0]} 20%, ${data[0]} 80%, ${greyCol} 100% )`  }} className="beer-card" key={id} >
                 {!showMore && 
                 <>
                 <div className="beer-card__date-label">
