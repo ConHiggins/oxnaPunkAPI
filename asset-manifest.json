@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/oxnaPunkAPI/static/css/main.88ea5305.css",
-    "main.js": "/oxnaPunkAPI/static/js/main.82e1ccdd.js",
+    "main.css": "/oxnaPunkAPI/static/css/main.30bbbcf1.css",
+    "main.js": "/oxnaPunkAPI/static/js/main.8ed1bd1d.js",
     "static/js/787.b461817b.chunk.js": "/oxnaPunkAPI/static/js/787.b461817b.chunk.js",
     "static/media/logo.svg": "/oxnaPunkAPI/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/oxnaPunkAPI/index.html",
-    "main.88ea5305.css.map": "/oxnaPunkAPI/static/css/main.88ea5305.css.map",
-    "main.82e1ccdd.js.map": "/oxnaPunkAPI/static/js/main.82e1ccdd.js.map",
+    "main.30bbbcf1.css.map": "/oxnaPunkAPI/static/css/main.30bbbcf1.css.map",
+    "main.8ed1bd1d.js.map": "/oxnaPunkAPI/static/js/main.8ed1bd1d.js.map",
     "787.b461817b.chunk.js.map": "/oxnaPunkAPI/static/js/787.b461817b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.88ea5305.css",
-    "static/js/main.82e1ccdd.js"
+    "static/css/main.30bbbcf1.css",
+    "static/js/main.8ed1bd1d.js"
   ]
 }
