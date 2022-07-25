@@ -1,1 +1,27 @@
 @use "../../vars" as *;
+
+.info-card {
+    position: relative;
+    z-index: 10;
+    width: 20rem;
+    height : 30rem;
+    border-radius: 1rem;
+    margin: 1.1rem;
+    margin-top:6rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    background: $white-col;
+    color: $black-col;
+    font-size: 1.5rem;
+    overflow: auto;
+    transition: border-radius 0.5s ease, transform 0.3s ease;
+    text-align: center;
+    transform: scale(0);
+
+
+    &:active {
+
+        transform: scale(1);
+    }
+}
+

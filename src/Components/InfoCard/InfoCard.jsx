@@ -2,10 +2,12 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import "./InfoCard.scss";
 
-const InfoCard = ({brewers_tips, food_pairing, ingredients}) => {
+const InfoCard = ({show, brewers_tips, food_pairing, malts}) => {
 
     const [infoState, setInfoState] = useState(0);
-    const info = [brewers_tips, food_pairing, ingredients];
+    const info = [`BREWER'S TIPS: ${brewers_tips}`, `Best paired with: ${food_pairing}`, malts];
+
+    
 
     const incrInfoState = () => {
 
@@ -18,12 +20,12 @@ const InfoCard = ({brewers_tips, food_pairing, ingredients}) => {
 
     let display = info[infoState];
 
-    return <div className="info-card">
+    return <>{show && <div className="info-card">
                 <p>{display}</p>
                 <Button isSecondary={true} value="<<" onClick={decrInfoState} />
                 <Button isSecondary={true} value=">>" onClick={incrInfoState} />
-            </div>
-
+            </div>}
+            </>
 
 }
 

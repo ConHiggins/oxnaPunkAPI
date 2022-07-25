@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Card.scss";
 import Button from "../Button/Button";
-// import Color from "color-thief-react";
-// import { Palette } from 'color-thief-react';
+import Color from "color-thief-react";
+import { Palette } from 'color-thief-react';
 
 
 import months from "../../data/months";
@@ -10,13 +10,12 @@ import months from "../../data/months";
 const Card = ({id, name, tagline, desc, img, brewdate}) => {
 
     const Loading = () => <div>Loading...</div>;
+    const blackCol = "#202020";
+    const greyCol = "#1b1c22";
 
     let dateStr;
 
     const [showMore, setShowMore] = useState(false);
-
-    const blackCol = "#202020";
-    const greyCol = "#1b1c22";
 
     const toggleShowMore = () => {
         setShowMore(!showMore);
@@ -27,10 +26,6 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
         ///Format date e.g January 1999
             dateStr = `${months[d.substring(1,2)-1]} ${d.substring(3,d.length)}`;
     } 
-
-    // useEffect (() => { 
-    //     formatDate(brewdate);
-    // }, []);
     
     formatDate(brewdate);
 
@@ -39,7 +34,7 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
     <div className="beer-card-wrapper">
     <div className="beer-card-background"></div>
     <div className="beer-card" key={id} >
-                {!showMore && 
+                {/* {!showMore && 
                 <>
                 <div className="beer-card__date-label">
                     <p className="beer-card__brew-date">First brewed: <br />{dateStr}</p>
@@ -56,10 +51,14 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
                     <Button isSecondary={true} value="X" onClick={toggleShowMore} />
                     <p className="beer-card__desc">{desc}</p> 
                 </>}
-            </div> 
-    {/* <Palette src={ img } crossOrigin="anonymous" format="hex">
+                */}
+             </div> 
+    { <Palette src={ img } crossOrigin="anonymous" format="hex">
         {({ data, loading }) => {
+            if(data == undefined) { return <p></p>}
           return (
+
+            
             <div style={{ background: `linear-gradient(to right, ${greyCol}, ${data[0]} 20%, ${data[0]} 80%, ${greyCol} 100% )`  }} className="beer-card" key={id} >
                 {!showMore && 
                 <>
@@ -71,7 +70,7 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
                     <p className="beer-card__tagline">{tagline}</p>
                     <div className="beer-card__button">
                         <Button isSecondary={true} value="Read more" onClick={toggleShowMore} />
-                    </div>
+                    </div>  
                 </> }
                 {showMore &&
                 <>    
@@ -80,7 +79,7 @@ const Card = ({id, name, tagline, desc, img, brewdate}) => {
                 </>}
             </div> 
         )}}
-    </Palette> */}
+    </Palette> }
     </div>
     </>
 )
