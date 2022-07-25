@@ -9,28 +9,39 @@ import Button from './Components/Button/Button';
 
 function App() {
 
+  const [params, setParams] = useState("");
   const [beers, setBeers] = useState(false);
+  
   
   const getBeers = async () => {
 
-    const response = await fetch("https://api.punkapi.com/v2/beers");
+    const response = await fetch("https://api.punkapi.com/v2/beers" + params);
     const data = await response.json();
     console.log(data);
     setBeers(data);
   }
+  useEffect(() => { getBeers(); }, [] );
 
 
-useEffect(() => {
-  getBeers();}, 
-  []);
+  const searchTermParams = () =>{
+
+    params.includes("/?beer_name=") ? 
+      setParams(params.replace(/\s+/g, '_') + searchTerm) : 
+      setParams(params.replace(/\s+/g, '_') + `/?beer_name=${searchTerm}`);
+      
+    console.log(params);
+    getBeers();
+
+  }
     
   ////////////////////////////////////////////////
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleInput = (event) => {
-    const cleanInput = event.target.value.toUpperCase();
+    const cleanInput = event.target.value.toLowerCase();
 
     setSearchTerm(cleanInput);
+    
   }
 ////////////////////////////////////////////////////
   let filteredBeers = [];
@@ -40,13 +51,18 @@ useEffect(() => {
 
       return beer.name.toUpperCase().includes(searchTerm);
       }) 
-    } 
+    }; 
 
   return (
     <>
-    <NavBar className="nav-bar" searchTerm={searchTerm} handleInput={handleInput} />
+    <NavBar className="nav-bar" 
+            searchTerm={searchTerm} 
+            handleInput={handleInput} 
+            searchTermParams={searchTermParams}
+            getBeers={getBeers} 
+            params={params} />
     {beers && 
-    <Main className="main" arr={filteredBeers} /> }
+    <Main className="main" arr={beers} /> }
     </>
   );
 }
