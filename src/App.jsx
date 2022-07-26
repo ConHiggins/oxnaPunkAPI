@@ -13,9 +13,13 @@ function App() {
   const [beers, setBeers] = useState(false);
   
   
-  const getBeers = async () => {
+  const getBeers = async (searchTerm) => {
 
-    const response = await fetch("https://api.punkapi.com/v2/beers" + params);
+    let beerParam;
+    if(searchTerm) { beerParam=`?beer_name=${searchTerm}` }
+    
+
+    const response = await fetch("https://api.punkapi.com/v2/beers/" + params);
     const data = await response.json();
     console.log(data);
     setBeers(data);
@@ -31,7 +35,6 @@ function App() {
       
     console.log(params);
     getBeers();
-
   }
     
   ////////////////////////////////////////////////
@@ -41,6 +44,7 @@ function App() {
     const cleanInput = event.target.value.toLowerCase();
 
     setSearchTerm(cleanInput);
+    console.log(searchTerm);
     
   }
 ////////////////////////////////////////////////////
@@ -49,7 +53,7 @@ function App() {
 
       filteredBeers = beers.filter(beer => {
 
-      return beer.name.toUpperCase().includes(searchTerm);
+      return beer.name.toLowerCase().includes(searchTerm);
       }) 
     }; 
 
