@@ -30,7 +30,8 @@ const CardList = ({arr}) => {
                         img={beer.image_url} 
                         onClick={toggleInfoCard}
                         />
-                    <InfoCard                        
+                    <InfoCard        
+                                      
                         show={showInfoCard}
                         brewers_tips={beer.brewers_tips}
                         food_pairing={beer.food_pairing}
