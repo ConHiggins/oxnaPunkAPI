@@ -2,20 +2,37 @@
 
 .button-primary {
 
+    position: relative;
+    top: 34rem;
+    left: 30%;
     border: none;
-    background: $pri-col;
+    border-radius: 0.5rem;
+    box-shadow: 0, $grey-col-rgb;
+    background: linear-gradient(to right, $transp, $font-col);
+    height: 4rem;
+    width: 40%;
+    z-index: 100;
+    font-size: 2rem;
+    font-family: "Josefin Slab";
     
 }
 
 .button-secondary {
 
+    position: relative;
+    padding: 0.5rem;
+    top: 60%;
     border: none;
     border-radius: 0.5rem;
-    border-top: 2px solid $font-col;
-    border-bottom: 2px solid $font-col;
+    border-left: 0.5rem solid $grey-col-rgb;
+    border-right: 0.5rem solid $grey-col-rgb;
+    border-top: 0.25rem solid $grey-col-rgb;
+    border-bottom: 0.25rem solid $grey-col-rgb;
     background: none;
-    color: $font-col;
-    height: 2rem;
+    color: $grey-col-rgb;
+    height: 4rem;
     font-size: 1.5rem;
     font-family: "Gantari";
+    
+    z-index: 100;
 }

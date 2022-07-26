@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");
+.info-card {
+  position: relative;
+  display: inline-block;
+  transform: scale(0.1);
+  z-index: 10;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 1rem;
+  margin: 1.1rem;
+  margin-top: 6rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  background: white;
+  color: #202020;
+  font-size: 1.5rem;
+  overflow: auto;
+  transition: border-radius 0.5s ease;
+  text-align: center;
+}/*# sourceMappingURL=InfoCard.css.map */

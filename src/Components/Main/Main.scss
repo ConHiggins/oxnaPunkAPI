@@ -1,7 +1,22 @@
 @use "../../vars" as *;
 
+.main {
+
+    margin: 0rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    left: 30%;
+    z-index: 100;
+}
 .card-list {
 
-    background: $grey-col;
+    background: $cream-col;
     border-radius: 1rem;
+    z-index: 10;
+    position: fixed;
 }
+
+
+

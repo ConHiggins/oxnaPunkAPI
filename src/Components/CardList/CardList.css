@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");
 .card-list {
-  margin: 10rem;
+  margin: 0rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 70%;
+  position: relative;
 }/*# sourceMappingURL=CardList.css.map */

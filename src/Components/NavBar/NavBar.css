@@ -1,1 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");/*# sourceMappingURL=NavBar.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");
+.nav-bar {
+  position: fixed;
+  z-index: 100;
+  height: 100%;
+  width: 30%;
+  max-width: 30%;
+  background-color: #3c6e71;
+}
+.nav-bar__searchbox {
+  width: 80%;
+  margin: 1rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=NavBar.css.map */

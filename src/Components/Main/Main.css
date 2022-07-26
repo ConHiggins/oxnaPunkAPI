@@ -1,5 +1,129 @@
 @import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");
+.main {
+  margin: 0rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 70%;
+  position: relative;
+  left: 30%;
+}
+
 .card-list {
-  background: #353535;
+  background: none;
   border-radius: 1rem;
+  z-index: 10;
+  position: absolute;
+}
+
+.bubbles-bg {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  background: #1b1c22;
+  margin: 0rem;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  left: 0;
+}
+
+.bubble-1 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 20rem;
+}
+
+.bubble-2 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 33rem;
+}
+
+.bubble-3 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 44rem;
+}
+
+.bubble-4 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 70rem;
+}
+
+.bubble-5 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 96rem;
+}
+
+.bubble-6 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 18rem;
+}
+
+.bubble-7 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 74rem;
+}
+
+.bubble-8 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 73rem;
+}
+
+.bubble-9 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 95rem;
+}
+
+.bubble-10 {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  top: 0;
+  left: 81rem;
 }/*# sourceMappingURL=Main.css.map */

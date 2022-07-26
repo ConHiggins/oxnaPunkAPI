@@ -1,1 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");/*# sourceMappingURL=Button.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");
+.button-primary {
+  border: none;
+  background: #3c6e71;
+}
+
+.button-secondary {
+  border: none;
+  border-radius: 0.5rem;
+  border-top: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+  background: none;
+  color: #d9d9d9;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-family: "Gantari";
+}/*# sourceMappingURL=Button.css.map */

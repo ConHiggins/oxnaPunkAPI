@@ -10,8 +10,8 @@
     &:before {
     content: '';
     position: absolute;
-    top: 1rem; left: 90%;
-    border-top: 80px solid $grey-col;
+    top: 1rem; left: 88%;
+    border-top: 80px solid $cream-col;
     border-left: 80px solid $black-col;
     width: 0;
     z-index: 10; }
@@ -19,9 +19,9 @@
     &::after {
     content: '';
     position: absolute;
-    top: 1rem; left: 5%;
-    border-top: 80px solid $grey-col;
-    border-right: 80px solid $black-col;
+    top: 1rem; left: 7%;
+    border-top: 80px solid $cream-col;
+    border-right: 90px solid $black-col;
     //border-image: linear-gradient(to bottom right, $grey-col 50%, $black-col 55%, $black-col 60%);
     width: 0;
     z-index: 1;
@@ -39,8 +39,8 @@
         top: 0;
         left: 0;
         border-radius: 1rem;
-        border-top-left-radius: 20%;
-        border-top-right-radius: 20%;
+        border-top-left-radius: 21%;
+        border-top-right-radius: 21%;
         border: 0.1rem solid $pri-col;
         border-top: 0.3rem solid $pri-col;
         border-bottom: 0.5rem solid $pri-col;
@@ -50,7 +50,7 @@
 
     position: relative;
     z-index: 10;
-    width: 20rem;
+    width: 21.5rem;
     height : 30rem;
     border-radius: 1rem 100% / 10% 70%;
     margin: 1.1rem;

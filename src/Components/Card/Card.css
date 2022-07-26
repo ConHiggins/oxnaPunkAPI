@@ -1,48 +1,150 @@
 @import url("https://fonts.googleapis.com/css2?family=Gantari&family=Josefin+Slab:ital,wght@1,500&family=Rubik+Mono+One&display=swap");
-.beer-card {
+.beer-card-wrapper {
   position: relative;
   width: 20rem;
-  height: 30rem;
+  height: 40rem;
+  margin: 4rem;
+}
+.beer-card-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 90%;
+  border-top: 80px solid #1b1c22;
+  border-left: 80px solid #202020;
+  width: 0;
+  z-index: 10;
+}
+.beer-card-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 5%;
+  border-top: 80px solid #1b1c22;
+  border-right: 80px solid #202020;
+  width: 0;
+  z-index: 1;
+}
+
+.beer-card-background {
+  content: "";
+  position: absolute;
+  margin: 1rem;
+  background: linear-gradient(to right, #1b1c22, #202020 20%, #202020 80%, #1b1c22 100%);
+  background: #202020;
+  width: 22rem;
+  height: 40rem;
+  top: 0;
+  left: 0;
   border-radius: 1rem;
-  margin: 2rem;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  border: 0.1rem solid #3c6e71;
+  border-top: 0.3rem solid #3c6e71;
+  border-bottom: 0.5rem solid #3c6e71;
+}
+
+.beer-card {
+  position: relative;
+  z-index: 10;
+  width: 20rem;
+  height: 30rem;
+  border-radius: 1rem 100%/10% 70%;
+  margin: 1.1rem;
+  margin-top: 6rem;
   padding: 1rem;
-  background: #284b63;
+  background: linear-gradient(to right, #202020, #284b63 20%, #284b63 80%, #202020 100%);
   color: #d9d9d9;
   font-size: 1.5rem;
   overflow: auto;
+  transition: border-radius 0.5s ease;
+  text-align: center;
 }
-.beer-card::-webkit-scrollbar {
-  background: #353535;
+.beer-card:hover {
+  border-radius: 0;
+}
+.beer-card:hover .beer-card__tagline {
+  opacity: 1;
+}
+.beer-card:hover .beer-card__brew-date {
+  opacity: 1;
+}
+.beer-card:hover .beer-card::-webkit-scrollbar {
   width: 2rem;
 }
+.beer-card::-webkit-scrollbar {
+  background: #202020;
+  width: 0rem;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
 .beer-card::-webkit-scrollbar-thumb {
-  background-color: #3c6e71;
+  background: linear-gradient(#202020, #3c6e71 49%, #3c6e71 51%, #202020 100%);
   height: 10%;
 }
 .beer-card__img {
-  margin-top: 2rem;
-  max-height: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  background: linear-gradient(to top, #d9d9d9, rgba(255, 0, 0, 0) 20%);
+  border-radius: 0.5rem;
+  max-height: 0%;
   position: relative;
-  left: 33%;
+  box-shadow: 0rem #202020;
+  transform: scale(0);
+  transition: transform 0.5s ease, max-height 0.5s ease;
+}
+.beer-card:hover .beer-card__img {
+  max-height: 40%;
+  transform: scale(1);
 }
 .beer-card__name {
   font-family: "Rubik Mono One";
+  margin-top: 6rem;
   font-size: 2rem;
   text-align: center;
+  color: white;
+  z-index: 100;
+  transition: margin-top 0.5s ease;
+}
+.beer-card:hover .beer-card__name {
+  margin-top: 2rem;
 }
 .beer-card__tagline {
   font-family: "Josefin Slab";
   font-style: italic;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 .beer-card__brew-date {
   position: absolute;
-  width: max;
-  top: 4rem;
+  font-family: "Josefin Slab";
+  opacity: 0;
+  font-weight: bold;
+  margin: 0;
+  top: 2rem;
   left: 0;
   text-indent: none;
-  background-color: #353535;
-  -webkit-transform: rotate(-45deg);
+  background-color: #d9d9d9;
+  color: #202020;
+  -webkit-transform: rotate(-30deg) skewX(10deg);
   z-index: 100;
   overflow: hidden;
   white-space: nowrap;
+  transition: opacity 0.5s ease;
+}
+.beer-card__desc {
+  font-family: "Josefin Slab";
+}
+.beer-card__button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.beer-card:hover .beer-card__button {
+  opacity: 1;
 }/*# sourceMappingURL=Card.css.map */

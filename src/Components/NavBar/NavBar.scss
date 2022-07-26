@@ -6,13 +6,97 @@
     height: 100%;
     width: 30%;
     max-width: 30%;
-    background-color: $pri-col;
+    background: $cream-col;
+    
+    &__searchbox-container {
 
-    &__searchbox {
+        display: flex;
+        flex-direction: column;
 
-        width: 80%;
-        margin: 1rem;
-        height: 2rem;
-        border-radius: 0.5rem;
     }
+        &__searchbox {
+
+            width: 50%;
+            margin: 1rem;
+            height: 3rem;
+            border: none;
+            border-radius: 0.5rem;
+            color: $orange-col;
+            font-size: 2rem;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            z-index: 100;
+            background: $grey-col-rgb;
+        }
+
+        &__search-button {
+
+            position: relative;
+            top: 50%;
+            left: 50%;
+            color: $black-col;
+            z-index: 100;
+
+        }
+        
+
+    .bubbles-bg {
+
+    z-index: 0;
+    content: '';
+    position: absolute;
+    background: linear-gradient( to right, 
+                                $dark-orange-col, 
+                                $dark-orange-col, 
+                                $orange-col 40%, 
+                                $dark-orange-col, 
+                                $dark-orange-col    );
+    margin: 0rem;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    left: 0;
+    border: 0.2rem solid $cream-col;
+    border-top: none;
+
+    &:before {
+        content: "";
+        background: $grey-col-rgb;
+        width: 100%;
+        height: 100%;   
+        z-index: 1;
+    }
+}
+
+@for $i from 1 through 10 {
+
+      
+
+    .bubble-#{$i} {
+        $width: random(3)+rem;
+        width: $width;
+        height: $width;
+        position: absolute;
+        background: radial-gradient($orange-col, $orange-col, $white-col);
+        border-radius: 50%;
+        top: 100%;//percentage(random(100)/100);
+        left: percentage(random(100)/100);
+        animation: random(10)-5 +s ease infinite move;
+
+        @keyframes move {
+            0%{
+            bottom: percentage(100 );}
+
+            100%{
+            bottom: random(100)+px;
+            transform: translate(random(25*$i)-50 +px, percentage(-300*$i)/100);
+            opacity: 0;}
+
+            }
+    
+        }
+
+    }  
 }

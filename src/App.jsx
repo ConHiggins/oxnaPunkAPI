@@ -15,40 +15,41 @@ function App() {
   
   
   const getBeers = async (searchTerm) => {
-
-    console.log(params);
-    
-
-    const response = await fetch("https://api.punkapi.com/v2/beers/?" + params);
+    const response = await fetch("https://api.punkapi.com/v2/beers/?" + params + "&per_page=80");
     const data = await response.json();
     console.log(data);
     setBeers(data);
   }
   useEffect(() => { getBeers(); }, [params] );
 
+//////////////////////////////////////////////////////////////////////
 
   const searchTermParams = () =>{
+    ///Check for beer name param and return index
+    const currentBeerParam = params.findIndex(elem => elem.includes("beer_name"));
 
-    const currentBeerParam = params.findIndex(elem => elem.includes("beer_name"))
-    console.log("currB:" + currentBeerParam);
+    ///Reset 
+    if(searchTerm == "") {
 
-    if(currentBeerParam !== -1) {
+      setParams(currState => {return [];});
+    }
+    ////if URL params already contain "beer_name"
+    else if(currentBeerParam !== -1) {
       
       setParams(currState => {
-
+        ////If so, just update the current index
         const tempParams = [...currState];
         tempParams[currentBeerParam] = `beer_name=${searchTerm}`;
         return tempParams;
         
-      })
+      });
     } else {
     setParams(currState => {
-
+      ///Else push new "beer_name" to params 
       const tempParams = [...currState];
       tempParams.push(`beer_name=${searchTerm}`);
-      return tempParams; })  }
-      
-    console.log(params);
+      return tempParams; 
+    })};
   }
     
   ////////////////////////////////////////////////
@@ -60,14 +61,7 @@ function App() {
     
   }
 ////////////////////////////////////////////////////
-  // let filteredBeers = [];
-  // if(beers) {
-
-  //     filteredBeers = beers.filter(beer => {
-
-  //     return beer.name.toLowerCase().includes(searchTerm);
-  //     }) 
-  //   }; 
+   
 
   return (
     <>
