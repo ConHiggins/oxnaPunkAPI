@@ -1,9 +1,12 @@
 import "./CardList.scss";
 import Card from "../Card/Card";
 import InfoCard from "../InfoCard/InfoCard";
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+
 
 const CardList = ({arr}) => {
+
+    
 
     const malt = arr.map(beer => {
 
@@ -20,7 +23,8 @@ const CardList = ({arr}) => {
 
 
     const beers = arr.map((beer, index) => {
-        return <>
+        return <> 
+                
                     <Card 
                         key={beer.id} 
                         name={beer.name} 
@@ -29,7 +33,8 @@ const CardList = ({arr}) => {
                         desc={beer.description} 
                         img={beer.image_url} 
                         onClick={toggleInfoCard}
-                        />
+                        /> 
+                
                     <InfoCard        
                                       
                         show={showInfoCard}

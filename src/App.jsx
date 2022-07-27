@@ -4,18 +4,18 @@ import Main from './Components/Main/Main';
 import NavBar from './Components/NavBar/NavBar';
 
 //import beers from './data/beers';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import Button from './Components/Button/Button';
 
-function App() {
-  
+function App() { 
+
   
   const [params, setParams] = useState([]);
   const [beers, setBeers] = useState(false);
   
   
   const getBeers = async (searchTerm) => {
-    const response = await fetch("https://api.punkapi.com/v2/beers/?" + params + "&per_page=80");
+    const response = await fetch("https://api.punkapi.com/v2/beers/?" + params + "&per_page=20");
     const data = await response.json();
     console.log(data);
     setBeers(data);
@@ -65,14 +65,17 @@ function App() {
 
   return (
     <>
+    
     <NavBar className="nav-bar" 
             searchTerm={searchTerm} 
             handleInput={handleInput} 
             searchTermParams={searchTermParams}
             getBeers={getBeers} 
             params={params} />
-    {beers && 
-    <Main className="main" arr={beers} /> }
+    <Suspense fallback={<h1>Finding beers...</h1>}>
+      {beers && 
+      <Main className="main" arr={beers} /> }
+    </Suspense>
     </>
   );
 }

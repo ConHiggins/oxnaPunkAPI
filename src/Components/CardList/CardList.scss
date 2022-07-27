@@ -11,15 +11,28 @@
 
     &:before {
 
-        // content: "";
-        // position: fixed;
-        // display: inline-block;
-        // width: 100%;
-        // height: 100%;
-        // top: 0;
-        // left: 30%;
-        // background: linear-gradient(to top, $grey-col, $transp 20%, $transp 80%, $grey-col);
-        // z-index: 200;
+        content: "";
+        position: fixed;
+        display: inline-block;
+        width: 100%;
+        height: 20%;
+        top: 0;
+        left: 30%;
+        background: linear-gradient(to bottom, $grey-col, $transp);
+        z-index: 200;
+    }
+
+    &:after {
+
+        content: "";
+        position: fixed;
+        display: inline-block;
+        width: 100%;
+        height: 30%;
+        top: 80%;
+        left: 30%;
+        background: linear-gradient(to top, $grey-col, $transp);
+        z-index: 200;
     }
 }
 

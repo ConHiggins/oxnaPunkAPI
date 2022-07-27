@@ -71,9 +71,6 @@
 }
 
 @for $i from 1 through 10 {
-
-      
-
     .bubble-#{$i} {
         $width: random(3)+rem;
         width: $width;
@@ -81,7 +78,7 @@
         position: absolute;
         background: radial-gradient($orange-col, $orange-col, $white-col);
         border-radius: 50%;
-        top: 100%;//percentage(random(100)/100);
+        top: 100%;
         left: percentage(random(100)/100);
         animation: random(10)-5 +s ease infinite move;
 
