@@ -40,6 +40,26 @@
             z-index: 100;
 
         }
+
+        &__input-container {
+            z-index: 100;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        &__input-title {
+            position: relative;
+            left: 50%;
+
+        }
+
+        &__input {
+            position: relative;
+            top: 70%;
+            left: 50%;
+        }
         
 
     .bubbles-bg {
