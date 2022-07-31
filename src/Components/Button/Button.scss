@@ -19,20 +19,18 @@
 
 .button-secondary {
 
-    position: relative;
     padding: 0.5rem;
-    top: 60%;
     border: none;
     border-radius: 0.5rem;
-    border-left: 0.5rem solid $grey-col-rgb;
-    border-right: 0.5rem solid $grey-col-rgb;
-    border-top: 0.25rem solid $grey-col-rgb;
-    border-bottom: 0.25rem solid $grey-col-rgb;
+    border-left: 0.5rem solid $font-col;
+    border-right: 0.5rem solid $font-col;
+    border-top: 0.25rem solid $font-col;
+    border-bottom: 0.25rem solid $font-col;
     background: none;
-    color: $grey-col-rgb;
+    color: $font-col;
     height: 4rem;
     font-size: 1.5rem;
     font-family: "Gantari";
-    
+    margin-top: 1rem;
     z-index: 100;
 }

@@ -10,13 +10,14 @@ import Button from "./Components/Button/Button";
 function App() {
     const [params, setParams] = useState([]);
     const [beers, setBeers] = useState(false);
+    const [loadCount, setLoadCount] = useState(0);
     let minAlcPercent, maxAlcPercent;
 
     const getBeers = async (params) => {
         const response = await fetch(
             "https://api.punkapi.com/v2/beers/?" +
                 params.join("&") +
-                "&per_page=20"
+                "&per_page=80"
         );
         const data = await response.json();
         console.log(data);
@@ -72,12 +73,21 @@ function App() {
         });
 
         minAlcPercent = Math.min(...alcoholPercents);
-        maxAlcPercent = Math.max(...alcoholPercents);
+
+        if (loadCount == 0) {
+            console.log("setting..");
+            maxAlcPercent = Math.max(...alcoholPercents);
+            console.log("max" + maxAlcPercent);
+            setLoadCount(1);
+        } else {
+            maxAlcPercent = 55;
+        }
+        console.log(loadCount);
     }
 
     /////////////////////////////////////////////////
 
-    const [sliderVal, setSliderVal] = useState(maxAlcPercent);
+    const [sliderVal, setSliderVal] = useState(0);
 
     const handleSlider = (event) => {
         setSliderVal(event.target.value);
@@ -111,15 +121,16 @@ function App() {
     ////////////////////////////////
 
     const updateURL = () => {
-        console.log(sliderVal);
+        console.log("slider" + sliderVal);
         searchTermParams();
         alcPercParams(params);
+
         console.log(params);
     };
 
     return (
         <>
-            {beers && (
+            {loadCount > 0 && (
                 <>
                     <NavBar
                         className="nav-bar"

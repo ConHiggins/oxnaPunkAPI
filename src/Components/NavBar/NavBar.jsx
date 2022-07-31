@@ -45,6 +45,10 @@ const NavBar = ({
                     />
                     <p className="nav-bar__input-title">{sliderVal}</p>
                 </div>
+                <div className="nav-bar__input-container">
+                    <p className="nav-bar__input-title">Low Acidity:</p>
+                    <input type="checkbox" className="nav-bar__checkbox" />
+                </div>
                 <div className="bubbles-bg">{bubbles}</div>
             </div>
         </div>

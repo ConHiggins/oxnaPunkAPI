@@ -6,7 +6,7 @@
     width: 20rem;
     height : 40rem;
     margin: 4rem;
-    animation: 1s ease normal slide, 1s ease 1s sway;
+    animation: 0.8s ease normal slide, 0.2s ease 1s sway;
 
     @keyframes slide {
         0%{
@@ -92,6 +92,7 @@
 .beer-card {
 
     position: relative;
+    display: false;
     z-index: 10;
     width: 21.5rem;
     height : 30rem;
@@ -180,6 +181,7 @@
         font-style: italic;
         opacity: 0;
         transition: opacity 0.5s ease;
+        margin-top: 1rem;
     }
 
     &__brew-date {

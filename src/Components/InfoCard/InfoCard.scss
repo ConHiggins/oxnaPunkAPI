@@ -3,14 +3,13 @@
 .info-card {
     position: relative;
     display: inline-block;
-    transform: scale(0.1);
-    z-index: 10;
+    transform: scale(1);
+    z-index: -100;
     width: 20rem;
     height : 30rem;
     border-radius: 1rem;
     margin: 1.1rem;
-    margin-top:6rem;
-    margin-right: 1rem;
+    margin-top:8rem;    
     padding: 1rem;
     background: $white-col;
     color: $black-col;
@@ -18,7 +17,15 @@
     overflow: auto;
     transition: border-radius 0.5s ease;
     text-align: center;
+    transform: rotate(10deg);
+    animation: 0.5s normal cardslide;
 
+    @keyframes cardslide {
+
+        0%{left: -20%; transform: rotate(0deg);}
+        100% {left: 0%; transform: rotate(10deg);}
+        
+    }
 
     
 }

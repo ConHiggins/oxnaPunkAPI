@@ -6,11 +6,20 @@ import { Palette } from "color-thief-react";
 
 import months from "../../data/months";
 
-const Card = ({ id, name, tagline, desc, img, brewdate }) => {
+const Card = ({
+    id,
+    name,
+    tagline,
+    desc,
+    img,
+    brewdate,
+    infoNum,
+    setInfoNum,
+    toggleInfoCard,
+    ph,
+}) => {
     ////////////////////////////////////////////////
 
-    const Loading = () => <div>Loading...</div>;
-    const blackCol = "#202020";
     const greyCol = "#1b1c22";
 
     let dateStr;
@@ -19,6 +28,9 @@ const Card = ({ id, name, tagline, desc, img, brewdate }) => {
 
     const toggleShowMore = () => {
         setShowMore(!showMore);
+        setInfoNum(id);
+        console.log(infoNum);
+        toggleInfoCard();
     };
 
     const formatDate = (d) => {
