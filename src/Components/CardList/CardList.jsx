@@ -3,7 +3,6 @@ import Card from "../Card/Card";
 import InfoCard from "../InfoCard/InfoCard";
 import { useState, useEffect, Suspense } from "react";
 import Button from "../Button/Button";
-import { info } from "sass";
 
 const CardList = ({ arr }) => {
     const malt = arr.map((beer) => {
