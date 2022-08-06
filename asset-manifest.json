@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/oxnaPunkAPI/static/css/main.fbb747e9.css",
-    "main.js": "/oxnaPunkAPI/static/js/main.44523dc3.js",
+    "main.css": "/oxnaPunkAPI/static/css/main.bb99632b.css",
+    "main.js": "/oxnaPunkAPI/static/js/main.5a0a67a8.js",
     "static/js/27.41d70470.chunk.js": "/oxnaPunkAPI/static/js/27.41d70470.chunk.js",
     "index.html": "/oxnaPunkAPI/index.html"
   },
   "entrypoints": [
-    "static/css/main.fbb747e9.css",
-    "static/js/main.44523dc3.js"
+    "static/css/main.bb99632b.css",
+    "static/js/main.5a0a67a8.js"
   ]
 }
