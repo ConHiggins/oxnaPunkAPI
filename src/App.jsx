@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Main from "./Components/Main/Main";
 import NavBar from "./Components/NavBar/NavBar";
 
-//import beers from './data/beers';
 import { useEffect, useState, useRef, Suspense } from "react";
 import Button from "./Components/Button/Button";
 
@@ -11,6 +9,8 @@ function App() {
     const [params, setParams] = useState([]);
     const [beers, setBeers] = useState(false);
     const [loadCount, setLoadCount] = useState(0);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [sliderVal, setSliderVal] = useState(0);
     let minAlcPercent, maxAlcPercent;
 
     const getBeers = async (params) => {
@@ -31,8 +31,8 @@ function App() {
 
     const searchTermParams = () => {
         ///Check for beer name param and return index
-        const currentBeerParam = params.findIndex((elem) =>
-            elem.includes("beer_name")
+        const currentBeerParam = params.findIndex(
+            (elem) => elem != undefined && elem.includes("beer_name")
         );
 
         ///Reset
@@ -60,7 +60,6 @@ function App() {
     };
 
     ////////////////////////////////////////////////
-    const [searchTerm, setSearchTerm] = useState("");
 
     const handleInput = (event) => {
         setSearchTerm(event.target.value);
@@ -86,8 +85,6 @@ function App() {
     }
 
     /////////////////////////////////////////////////
-
-    const [sliderVal, setSliderVal] = useState(0);
 
     const handleSlider = (event) => {
         setSliderVal(event.target.value);

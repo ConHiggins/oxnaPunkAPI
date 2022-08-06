@@ -5,6 +5,9 @@ import { useState, useEffect, Suspense } from "react";
 import Button from "../Button/Button";
 
 const CardList = ({ arr }) => {
+    const [showInfoCard, setShowInfoCard] = useState(false);
+    const [infoNum, setInfoNum] = useState(0);
+
     const malt = arr.map((beer) => {
         return (
             <p>
@@ -14,9 +17,6 @@ const CardList = ({ arr }) => {
             </p>
         );
     });
-
-    const [showInfoCard, setShowInfoCard] = useState(false);
-    const [infoNum, setInfoNum] = useState(0);
 
     const updateInfoNum = (n) => {
         setInfoNum(n);
